@@ -105,9 +105,15 @@ body {
 }
 
 .hero {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	width: 100%;
 	vertical-align: top;
 	opacity: 0;
+	z-index: 10;
 
 	@media (min-width: $tablet) {
 		position: absolute;

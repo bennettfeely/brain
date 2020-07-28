@@ -135,7 +135,7 @@ function init() {
 	};
 
 	// Setup controls
-	var controls = new OrbitControls(camera, document.querySelector("html"));
+	var controls = new OrbitControls(camera, document.querySelector(".hero"));
 	controls.autoRotate = false;
 	controls.enableZoom = false;
 	controls.enablePan = false;
