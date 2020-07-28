@@ -58,6 +58,17 @@ body {
 	}
 }
 
+.roll {
+	animation: roll 1s both;
+	transform-origin: center top;
+}
+
+@for $i from 1 through 9 {
+	.roll-#{$i} {
+		animation-delay: $i * 0.25s + 1s;
+	}
+}
+
 .main-wrapper {
 	position: relative;
 	margin: 0 auto;
@@ -91,6 +102,19 @@ body {
 		top: initial;
 		right: initial;
 	}
+}
+
+.hero {
+	width: 100%;
+	vertical-align: top;
+	opacity: 0;
+
+	@media (min-width: $tablet) {
+		position: absolute;
+		left: -20%;
+		height: 100%;
+		width: auto;
+	}
 
 	&:focus {
 		outline: 0;
@@ -98,18 +122,6 @@ body {
 
 	&.roll {
 		animation-delay: 2.25s;
-	}
-}
-
-.hero {
-	width: 100%;
-	vertical-align: top;
-
-	@media (min-width: $tablet) {
-		position: absolute;
-		left: -20%;
-		height: 100%;
-		width: auto;
 	}
 }
 
@@ -127,17 +139,6 @@ h1,
 h2,
 p {
 	margin-bottom: 1em;
-}
-
-.roll {
-	animation: roll 1s both;
-	transform-origin: center top;
-}
-
-@for $i from 1 through 9 {
-	.roll-#{$i} {
-		animation-delay: $i * 0.25s + 1s;
-	}
 }
 
 @keyframes roll {
