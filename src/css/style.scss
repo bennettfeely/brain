@@ -18,7 +18,7 @@ $mobile: 32em;
 $tablet: 48em;
 $desktop: 80em;
 
-$background: shade(#2f5091, 80%);
+$background: #09101d;
 
 // Base ================================================================
 body {
@@ -94,6 +94,10 @@ body {
 
 	&:focus {
 		outline: 0;
+	}
+
+	&.roll {
+		animation-delay: 2.25s;
 	}
 }
 

@@ -107,9 +107,10 @@ function initScene() {
 	scene.add(light_6);
 
 	light_7 = new THREE.PointLight(light_7_color, 5, 10);
-	light_7.position.x = -5;
+	light_7.position.x = 0;
 	light_7.position.y = 0;
 	light_7.position.z = -10;
+
 	scene.add(light_7);
 
 	// Wall
@@ -160,7 +161,7 @@ function initScene() {
 
 		start_time = Date.now();
 
-		moveObject();
+		document.querySelector(".hero-wrapper").classList.add("roll");
 
 		animate();
 	};
@@ -198,14 +199,6 @@ function initMisc() {
 	controls.enablePan = false;
 
 	controls.update();
-}
-
-function moveObject() {
-	console.log("moveObject();");
-
-	light_7.position.x = 0;
-	light_7.position.y = 0;
-	light_7.position.z = -10;
 }
 
 function animate() {
