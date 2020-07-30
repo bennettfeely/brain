@@ -5,20 +5,14 @@
 @import "variables";
 
 // Variables ===========================================================
-$serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-	sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$monospace: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
-	monospace;
-
-$radius: 3px;
-
-$shadow: 0 3px 6px rgba($black, 0.1);
-
 $mobile: 32em;
 $tablet: 48em;
 $desktop: 80em;
 
 $background: #09101d;
+
+$radius: 3px;
+$shadow: 0 3px 6px rgba($black, 0.1);
 
 // Base ================================================================
 body {
@@ -26,11 +20,8 @@ body {
 	align-items: center;
 	justify-content: center;
 	font: 100%/1.3 Inconsolata, sans-serif;
-	color: $blue-gray-50;
-
 	color: $white;
 	background: currentColor;
-
 	min-height: 100vh;
 }
 
@@ -145,6 +136,7 @@ h1,
 h2,
 p {
 	margin-bottom: 1em;
+	position: relative;
 }
 
 @keyframes roll {
@@ -159,6 +151,9 @@ p {
 }
 
 h1 {
+	position: relative;
+	z-index: 10;
+	display: inline-block;
 	letter-spacing: 0.15em;
 	font-size: 2em;
 	font-family: Inconsolata;
@@ -166,6 +161,8 @@ h1 {
 }
 
 h2 {
+	position: relative;
+	z-index: 10;
 	font-size: 1.5em;
 	font-weight: 400;
 	color: $blue-gray-300;
