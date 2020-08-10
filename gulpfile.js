@@ -53,8 +53,8 @@ gulp.task("html", function () {
 // JS ================================================================
 gulp.task("js", function () {
 	return gulp
-		.src("src/js/brain.js")
-		.pipe(gulp.dest(""))
+		.src("src/js/*.js")
+		.pipe(gulp.dest("js"))
 		.pipe(
 			browserSync.reload({
 				stream: true,
@@ -81,7 +81,7 @@ gulp.task("scss", function () {
 				path.extname = ".css";
 			})
 		)
-		.pipe(gulp.dest(""))
+		.pipe(gulp.dest("css"))
 		.pipe(
 			browserSync.reload({
 				stream: true,
@@ -92,7 +92,7 @@ gulp.task("scss", function () {
 // Watch Files For Changes ===========================================
 gulp.task("watch", ["sync"], function () {
 	gulp.watch("src/*.slim", ["html"]);
-	gulp.watch("src/js/brain.js", ["refresh"]);
+	gulp.watch("src/js/*.js", ["js"]);
 	gulp.watch("src/css/*.scss", ["scss"]);
 });
 
